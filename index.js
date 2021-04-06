@@ -203,9 +203,6 @@ let testing = () => {
         oneD = oneD.concat(solution[i]); 
     }
     
-    console.log({twoD});
-    console.log({oneD});
-    console.log({solution});
     for (let i = 0; i < oneD.length; i++) {
         board[i].value = oneD[i]
         
