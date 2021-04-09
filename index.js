@@ -196,61 +196,8 @@ let testing = () => {
     }
     for (let i = 0; i < oneD.length; i++) {
         board[i].value = oneD[i] 
-<<<<<<< HEAD
     }
 }
-=======
-    }
-}
-
-    let hint = () => {
-        let preBoard = document.querySelectorAll("input");
-        let inputsToArr = [];
-
-        for (let i = 0; i < preBoard.length; i++) {
-            if (preBoard[i].value === "") {
-                inputsToArr.push(null);
-            } else {
-                inputsToArr.push(parseInt(preBoard[i].value));
-            }
-        }
-
-        let twoD = []
-        while(inputsToArr.length) twoD.push(inputsToArr.splice(0,9));
-
-        let unsolvedOneD = [];
-        let solved = solve(twoD);
-        let oneD = [];
-
-        for (let i = 0; i < solved.length; i++) {
-            unsolvedOneD = unsolvedOneD.concat(twoD[i]);
-        }
-        
-        for (let i = 0; i < solved.length; i++) {
-            oneD = oneD.concat(solved[i]); 
-        }
-        
-        for (let i = 0; i < unsolvedOneD.length; i++) {
-            if (unsolvedOneD[i] === null) {
-                preBoard[i].value = oneD[i];
-                break;
-            }
-        }
-    }
-
-    let reset = () => {
-       let board = document.querySelectorAll("input")
-
-       for (let i = 0; i < board.length; i++) {
-           board[i].value = ""
-       }
-    }
-
-
-    
-    
-
->>>>>>> makingChanges
 
     let hint = () => {
         let preBoard = document.querySelectorAll("input");
