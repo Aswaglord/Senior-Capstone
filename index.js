@@ -238,10 +238,25 @@ let testing = () => {
        let board = document.querySelectorAll("input")
 
        for (let i = 0; i < board.length; i++) {
-           board[i].value = ""
+           board[i].value = "";
        }
+    }
+
+    let check = () => {
+        let board = document.querySelectorAll("input");
+        let boardAsArr = [];
+
+        for (let i = 0; i < board.length; i++) {
+            if(board[i].value === "") {
+                boardAsArr.push(null)
+            } else {
+                boardAsArr.push(parseInt(board[i].value));
+            }
+        }
+        console.log(boardAsArr);
     }
 
 document.querySelector(".solve").addEventListener("click", testing);
 document.querySelector(".hint").addEventListener("click", hint);
 document.querySelector(".reset").addEventListener("click", reset);
+document.querySelector(".check").addEventListener("click", check);
